@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projects</title>
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700&family=DM+Sans:wght@300;400;500&family=DM+Mono&display=swap"
+        rel="stylesheet">
+
+    <style>
+        :root {
+            --bg: #080c12;
+            --bg2: #0e1420;
+            --bg3: #131a26;
+            --accent: #00d4ff;
+            --accent2: #7c3aed;
+            --text: #e8eaf2;
+            --muted: #6b7280;
+            --border: rgba(255, 255, 255, 0.07);
+            --card: rgba(255, 255, 255, 0.03);
+            --font-head: 'Syne', sans-serif;
+            --font-body: 'DM Sans', sans-serif;
+            --font-mono: 'DM Mono', monospace;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: var(--font-body);
+            padding: 60px 20px;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            padding: 1.2rem 4rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(8, 12, 18, 0.85);
+            backdrop-filter: blur(16px);
+            border-bottom: 1px solid var(--border)
+        }
+
+        .nav-logo {
+            font-family: var(--font-head);
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--text);
+            letter-spacing: 0.08em;
+            text-decoration: none
+        }
+
+        .nav-logo span {
+            color: var(--accent)
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none
+        }
+
+        .nav-links a {
+            color: var(--muted);
+            text-decoration: none;
+            font-size: 0.85rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            font-weight: 500;
+            transition: color 0.2s
+        }
+
+        .nav-links a:hover {
+            color: var(--accent)
+        }
+
+        .nav-cta {
+            background: var(--accent);
+            color: #080c12;
+            padding: 0.5rem 1.4rem;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-decoration: none;
+            letter-spacing: 0.05em;
+            transition: opacity 0.2s
+        }
+
+        .nav-cta:hover {
+            opacity: 0.85
+        }
+
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            margin-top: 50px;
+        }
+
+        .section-title {
+            font-family: var(--font-head);
+            font-size: 42px;
+            margin-bottom: 10px;
+        }
+
+        .section-sub {
+            color: var(--muted);
+            margin-bottom: 40px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 18px;
+            overflow: hidden;
+            transition: 0.3s ease;
+            position: relative;
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+            border-color: var(--accent);
+        }
+
+        .card-img {
+            height: 180px;
+            background: linear-gradient(135deg, var(--accent), var(--accent2));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-mono);
+            font-size: 14px;
+            color: #000;
+        }
+
+        .card-content {
+            padding: 20px;
+        }
+
+        .card-title {
+            font-family: var(--font-head);
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .card-desc {
+            font-size: 14px;
+            color: var(--muted);
+            margin-bottom: 15px;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 15px;
+        }
+
+        .tag {
+            font-size: 12px;
+            padding: 5px 10px;
+            border: 1px solid var(--border);
+            border-radius: 999px;
+            color: var(--muted);
+        }
+
+        .card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .btn {
+            text-decoration: none;
+            font-size: 13px;
+            color: var(--accent);
+            border: 1px solid var(--accent);
+            padding: 6px 12px;
+            border-radius: 8px;
+            transition: 0.2s;
+        }
+
+        .btn:hover {
+            background: var(--accent);
+            color: #000;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <a href="#hero" class="nav-logo">FU<span>AD</span></a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="/fuad_about_page.html">About</a></li>
+            <li><a href="#">Skills</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <a href="#contact" class="nav-cta">Hire Me</a>
+    </nav>
+
+
+    <div class="container">
+        <h1 class="section-title">My Projects</h1>
+        <p class="section-sub">A selection of my recent WordPress work</p>
+
+        <div class="grid">
+
+            <!-- Card 1 -->
+            <div class="card">
+                <div class="card-img">Project Preview</div>
+                <div class="card-content">
+                    <h3 class="card-title">Business Website</h3>
+                    <p class="card-desc">Custom WordPress business site with Elementor and responsive design.</p>
+                    <div class="tags">
+                        <span class="tag">WordPress</span>
+                        <span class="tag">Elementor</span>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#" class="btn">Live</a>
+                        <a href="#" class="btn">Code</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="card">
+                <div class="card-img">Project Preview</div>
+                <div class="card-content">
+                    <h3 class="card-title">E-commerce Store</h3>
+                    <p class="card-desc">WooCommerce store with payment integration and product filters.</p>
+                    <div class="tags">
+                        <span class="tag">WooCommerce</span>
+                        <span class="tag">Stripe</span>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#" class="btn">Live</a>
+                        <a href="#" class="btn">Code</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="card">
+                <div class="card-img">Project Preview</div>
+                <div class="card-content">
+                    <h3 class="card-title">Portfolio Site</h3>
+                    <p class="card-desc">Minimal portfolio with custom theme and animations.</p>
+                    <div class="tags">
+                        <span class="tag">Custom Theme</span>
+                        <span class="tag">GSAP</span>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#" class="btn">Live</a>
+                        <a href="#" class="btn">Code</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="card">
+                <div class="card-img">Project Preview</div>
+                <div class="card-content">
+                    <h3 class="card-title">Blog Platform</h3>
+                    <p class="card-desc">SEO-optimized blog with fast loading and clean UI.</p>
+                    <div class="tags">
+                        <span class="tag">SEO</span>
+                        <span class="tag">ACF</span>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#" class="btn">Live</a>
+                        <a href="#" class="btn">Code</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="card">
+                <div class="card-img">Project Preview</div>
+                <div class="card-content">
+                    <h3 class="card-title">Landing Page</h3>
+                    <p class="card-desc">High-converting landing page with modern UI and CTA focus.</p>
+                    <div class="tags">
+                        <span class="tag">UI/UX</span>
+                        <span class="tag">Conversion</span>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#" class="btn">Live</a>
+                        <a href="#" class="btn">Code</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="card">
+                <div class="card-img">Project Preview</div>
+                <div class="card-content">
+                    <h3 class="card-title">Membership Site</h3>
+                    <p class="card-desc">Subscription-based WordPress platform with user dashboard.</p>
+                    <div class="tags">
+                        <span class="tag">Membership</span>
+                        <span class="tag">API</span>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#" class="btn">Live</a>
+                        <a href="#" class="btn">Code</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
